@@ -1,0 +1,57 @@
+click "ColbertNation"
+
+(*http://www.colbertnation.com/*)
+
+click "PlayerControlsColbert"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+end if
+
+if ImageFound("AdContent")
+	Wait 30
+end if
+
+click "PlayerControlsColbert"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+moveTo "PauseButton"
+
+Wait 30
+
+Click "Colbert2ndClip"
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+end if
+
+if ImageFound("AdContent")
+	Wait, 30
+end if
+
+click "PlayerControlsColbert"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+moveTo "PauseButton"
+
+
+Click "Colbert3rdClip"
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+end if
+
+if ImageFound("AdContent")
+	Wait, 30
+end if
+
+click "PlayerControlsColbert"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+moveTo "PauseButton"
+
+
+
+

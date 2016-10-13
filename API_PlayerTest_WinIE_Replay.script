@@ -1,0 +1,28 @@
+doubleclick "ReplayClip"
+
+wait 10
+
+click "apiPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+click "apiPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "PauseButton"
+
+click "apiPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+drag "sliderNeedle"
+drop "apiEndPoint"
+
+click "apiPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+if ImageFound("playButton")
+	click FoundImageLocation()
+end if
+
+waitfor 40, "justWatched"
+moveto "justWatched"

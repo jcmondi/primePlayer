@@ -1,0 +1,24 @@
+(*click "Chrome"*)
+
+doubleclick "Gametrailers"
+
+wait 15
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+	wait 30
+end if
+
+click "gtPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+(*moveto "HD"*)
+moveto "PauseBUtton"
+click "gt1stSegmentRT"
+
+Click "gt2ndSegment"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+Moveto "2ndSegmentAdvanceRT"
+

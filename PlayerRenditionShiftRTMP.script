@@ -1,0 +1,93 @@
+Click "proto-d"
+(*Click "Proto-Q"*)
+
+if ImageFound("okButton")
+	Click FoundImageLocation()
+end if
+
+waitfor 10, "AdvancedTab"
+(*Click "AdvancedTab"*)
+
+if ImageFound("okButton")
+	Click FoundImageLocation()
+end if
+
+(*
+repeat until imageFound("LoaderURL")
+	click "Scrollbar"
+end repeat
+
+
+click "LoaderURL"
+typeText commandKey, "a"
+
+typetext backspace
+
+typeText "/player/prime/?v=2.0.4-2"
+
+
+(*click the last item of EveryImageLocation("Setbutton")*)
+
+click "LoaderSetbutton"
+
+click "RefreshButton"
+*)
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+	wait 30
+end if
+
+click "BandwidthMetrics"
+wait 2
+click "DisplayMetrics"
+wait 2
+click "RenditionMgmt"
+(*
+if ImageFound("PlayButtonLg01", "PlayButtonLg") 
+	Click FoundImageLocation()
+end if*)
+
+moveto ("Rendition5", "Rendition4")
+moveto "upcomingNaN"
+moveto ("maxRendition4", "maxRendition5")
+
+
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+moveto "fullScreenBUtton"
+
+click "PlayerSizeSmall"
+moveto "upcomingRendition0"
+moveto "maxRendition0"
+
+waitfor 5, "shiftDown"
+waitfor 20, "rendition0"
+moveto "rendition0"
+
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+moveto "fullScreenBUtton"
+
+click "PlayerSizeLarge"
+
+Moveto ("upcomingRendition5", "upcomingRendition4")
+
+moveto "upcomingRendition5"
+moveto "maxRendition5"
+(*waitfor 5, "shiftUp"*)
+waitfor 20,  ("Rendition5", "Rendition4")
+Moveto ("Rendition5", "Rendition4")
+
+
+
+
+
+
+
+
+
+
+

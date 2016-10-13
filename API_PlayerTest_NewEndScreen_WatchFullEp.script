@@ -1,0 +1,4 @@
+click "WatchFullEp"
+moveTo "FullEpData"
+click "CloseFullEp"
+

@@ -1,0 +1,30 @@
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+moveto "fullScreenBUtton"
+click "PlayerSizeSmall"
+
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "PauseButton"
+
+
+if ImageFound("ccLiveTvSm")
+	MoveTo FoundImageLocation()
+end if
+
+
+if ImageFound("ccCaptionSm")
+	MoveTo FoundImageLocation()
+end if
+
+click "PauseButton"
+
+
+
+
+waitFor 15, "ccCaptionSm"
+(*moveTo "ccCaptionSm"*)*)
+
+

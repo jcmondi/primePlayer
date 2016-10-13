@@ -1,0 +1,2 @@
+waitfor 40, "justWatched"
+moveto "justWatched"

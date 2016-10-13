@@ -1,0 +1,19 @@
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+moveto "fullScreenBUtton"
+
+click "PlayerSizeLarge"
+(*moveto "maxRendition6"
+moveto "upcomingRendition6"*)
+(*waitfor 5, "shiftUp"*)
+waitfor 20, "Rendition6"
+moveto "Rendition6"
+
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+moveto "HD"
+wait 2
+moveto "fullScreenBUtton"
+click "PlayerSizeMedium"

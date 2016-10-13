@@ -1,0 +1,16 @@
+click "Bookmarks"
+click "TDS"
+
+click "ResetCharles"
+
+waitfor 10, "PlayerControlsComedy"
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+end if
+
+wait 120
+click "PlayerControlsComedy"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+moveto "PauseButton"

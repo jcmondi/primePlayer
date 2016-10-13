@@ -1,0 +1,17 @@
+click "Bookmarks"
+click "TDS"
+
+click "ResetCharles"
+
+waitfor 10, "PlayerControlsTDS"
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+	Click "PauseButton"
+end if
+
+wait 20
+
+If not ImageFound("AdContent")
+	LogError "AdPlaybackNotPaused"
+end if

@@ -1,0 +1,21 @@
+waitfor 60, "replayButton"
+
+click "stopCountdown"
+click "replayButton"
+
+moveTo "mtvControls"
+
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+if ImageFound(10, "Scrubber")
+	MoveTo FoundImageLocation()
+	LogError "Scrubber Found"
+end if
+
+
+
+
+
+
+

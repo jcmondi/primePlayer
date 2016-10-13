@@ -1,0 +1,16 @@
+
+wait 2
+click "FreeWheelFolder3"
+click "FreeWheelManifestFolder"
+click "FreeWheelManifestFile"
+
+if ImageFound("Response")
+	click FoundImageLocation()
+end if
+
+click "FreeWheelImpressions"
+
+
+
+
+

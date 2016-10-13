@@ -1,0 +1,35 @@
+if ImageFound("DailyShowFullEp", "DailyShowFullEp01")
+	click FoundImageLocation()
+end if
+
+click "ResetCharles"
+
+click "PlayerConfig"
+waitfor 5, "pmtConfig"
+
+click "pmtConfig"
+
+click "configXML"
+
+if ImageFound("Response")
+	click FoundImageLocation()
+end if
+
+if ImageFound("amaTrue")
+	MoveTo FoundImageLocation()
+	Moveto "AMA_URL_76"
+	click "AMA76_R"
+	click "AMA_Config"
+	moveto "beaconENT"
+	moveto "AMAgif"
+end if
+
+if ImageFound("amaFalse")
+	MoveTo FoundImageLocation()
+	If ImageFound (30, "AMA76_R")
+		LogError "AMA76_R found"
+		(*If not ImageFound (10, "AMA76_R")
+			MoveTo FoundImageLocation()	
+		end if*)
+	end if
+end if

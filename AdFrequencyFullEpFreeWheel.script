@@ -1,0 +1,26 @@
+(* http://www.thedailyshow.com/full-episodes/thu-march-1-2012-m--cathleen-kaveny*)
+
+(*2*)
+
+(* Ad Frequency - Ad should not play *)
+
+if ImageFound("DailyShowFullEp", "DailyShowFullEp01")
+	click FoundImageLocation()
+end if
+
+click "PlayerControlsComedy"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "PlayButton"
+
+
+click "FreeWheelFolder3"
+
+waitfor 80, "AdContent"
+moveto "AdContent"
+click "FWP"
+moveto "FW3"
+
+(* Ad Frequency - Ad should play *)
+
+

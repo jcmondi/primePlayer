@@ -1,0 +1,18 @@
+if ImageFound("vmnOmnitureCall", "viarndOmnitureCall")
+	Click FoundImageLocation()
+end if
+
+click "OmnitureASCall"
+
+if ImageFound("Request")
+	Click FoundImageLocation()
+end if
+
+moveTo "v27mtv"
+moveTo "c30mgid"
+moveTo "c50LiveCC"
+
+
+
+
+

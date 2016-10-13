@@ -1,0 +1,5 @@
+click "EndScreenLink"
+moveto "LinkURL"
+click "linkCloseButton"
+
+

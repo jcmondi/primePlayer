@@ -1,0 +1,5 @@
+connect "NY-MONDIJ-SL2"
+show remotescreen
+wait 4
+connect "Adams"
+Show remotescreen

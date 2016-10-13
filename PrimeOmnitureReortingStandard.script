@@ -1,0 +1,20 @@
+(*
+click "ResetCharles"
+
+click "mtvEp"
+
+waitfor 10, "mtvControls"
+
+waitFor 30, "mtvOmniture"
+
+click "mtvOmniture"
+click "OmnitureASCall"
+
+if ImageFound("Request")
+	Click FoundImageLocation()
+end if
+*)
+
+moveTo "v27Domain"
+moveTo "c21MediaContentType"
+moveTo "c30Mgid"

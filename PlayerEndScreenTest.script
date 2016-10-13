@@ -1,0 +1,17 @@
+(*doubleclick "Gametrailers"*)
+
+(*2*)
+
+click "gtPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+
+click "gtEndPoint"
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+end if
+
+waitfor 70, "ReplayButton"
+moveto "ReplayButton"

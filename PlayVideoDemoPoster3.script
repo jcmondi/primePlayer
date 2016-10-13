@@ -1,0 +1,50 @@
+(*Click "ProtoTest"*)
+
+(*Click "Proto-Q"*)
+Click "proto-d"
+(* playlist URL = http://media.mtvnservices-d.mtvi.com/proto/player_test/index.php?feed=xml%2Ffeeds%2Fplaylist.xml *)
+
+waitfor 10, "AdvancedTab"
+
+wait 4
+
+Click "AdvancedTab"
+
+(*repeat until imageFound("FormFactorField")
+	click "Scrollbar"
+end repeat*)
+
+waitfor 10, "FormFactorField"
+click "FormFactorField"
+
+typeText commandKey, "a"
+
+typetext backspace
+
+typeText "1:0.9:3"
+
+click "FormFactorSet"
+
+(*doubleclick item of EveryImageLocation("Setbutton")*)
+
+click "RefreshButton"
+wait 10
+(*click "ScrollbarTop"*)
+Click "PlayerControlPanel"
+
+(*if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+end if
+wait 20*)
+
+click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+Click "PauseButton"
+click "endPoint"
+(*drag "SliderNeedle"
+Drop "EndTimer"*)
+(*Drop "EndTimerQ"*)
+Click "PlayButton"
+WaitFor 20, "ReplayButton"
+MoveTo "ReplayButton"

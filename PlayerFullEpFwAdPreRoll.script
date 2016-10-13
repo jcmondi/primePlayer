@@ -1,0 +1,44 @@
+(* http://www.southparkstudios.com/full-episodes/s15e01-humancentipad *)
+
+if ImageFound("SouthParkFullEp")
+	doubleClick FoundImageLocation()
+end if
+
+(*preRoll *)
+
+click "ResetCharles"
+
+waitfor 15, "SouthParkPlayerControls"
+
+wait 10
+
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+end if
+
+if ImageFound ("FreeWheelFolder3")
+	click FoundImageLocation()
+	(*click "FreeWheelFolder3"*)
+end if
+
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+end if
+
+
+if ImageFound ("FreeWheelFolder")
+	click FoundImageLocation()
+	wait 3
+	click "FWP"
+	moveto "FWVideoRenderer"
+	click "FreeWheelFolder"
+end if
+
+if ImageFound ("FreeWheelFolder2")
+	click FoundImageLocation()
+	wait 5
+	moveto "FW2"
+	click "FreeWheelFolder2"
+end if

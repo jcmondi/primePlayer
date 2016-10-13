@@ -1,0 +1,50 @@
+doubleclick "playerAPI"
+
+waitfor 10, "PosterPlayButton"
+moveto "PosterPlayButton"
+(*click "PosterPlayButton"*)
+
+doubleclick "MGID"
+typeText commandKey, "a"
+
+typetext backspace
+
+typeText "mgid:cms:video:thedailyshow.com:357717"
+
+click "apiLoad"
+
+waitfor 10, "PosterPlayButton"
+moveto "PosterPlayButton"
+
+click "Method"
+click "apiPlay"
+click "run"
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+	wait 30
+end if
+
+
+(*moveto "playstates.playing"*)
+
+click "apiPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "PauseButton"
+
+(*moveto "playstates.Paused"*)
+
+moveto "playURiTRT"
+
+click "apiPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "PlayButton"
+click "EndPointAPI"
+
+(*waitfor 40, "ReplayButton"
+moveto "ReplayButton"*)
+(*click "ReplayButton"*)
+
+(*click "ClearButton"*)

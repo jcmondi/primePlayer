@@ -1,0 +1,22 @@
+(*http://media.mtvnservices-d.mtvi.com/proto/player_test/index.php?feed=xml/feeds/fms/clip_tds_l3.xml*)
+
+
+Click "proto-d"
+
+wait 5
+
+Click "PlayerControlPanel"
+
+(*
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+(*Click "PlayerControlPanel"*)
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+Click "PauseButton"
+drag "SliderNeedle"
+Drop "EndTimer"
+Click "PlayButton"
+*)
+WaitFor 400, "ReplayButton"
+MoveTo "ReplayButton"

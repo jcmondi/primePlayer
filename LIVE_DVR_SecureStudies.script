@@ -1,0 +1,7 @@
+(*if ImageFound("SecureStudiesBeacon")*)
+click "SecureStudiesBeacon"
+(*click "BeaconScripts"*)
+moveto "BeaconPings"
+moveto item of EveryImageLocation("PixelSwf")
+click "SecureStudiesBeacon"
+(*end if*)

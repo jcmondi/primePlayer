@@ -1,0 +1,26 @@
+moveTo "ReplayClip"
+click "ReplayClip"
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+	wait 30
+end if
+
+click "apiPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "PauseButton"
+
+drag "sliderNeedle"
+drop "apiEndPoint"
+
+click "apiPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "Playbutton"
+
+waitfor 10, "ReplayClip"
+moveTo "ReplayClip"
+
+
+

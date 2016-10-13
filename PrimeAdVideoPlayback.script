@@ -1,0 +1,46 @@
+click "ResetCharles"
+
+click "Bookmarks"
+click "VH1Ep"
+
+
+waitfor 10, "mtvControls"
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+	wait 30
+end if
+
+(*moveto "mtvControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+moveto "runtime"*)
+
+moveto "mtvControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "mtvEpEndofPlaylist"
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+	wait 30
+end if
+
+(*waitfor 60, "stopCountdown"
+click "stopCountdown"*)
+
+(*
+click "replayButton"
+
+waitfor 10, "mtvControls"
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+	wait 30
+end if
+*)
+
+
+
+
+

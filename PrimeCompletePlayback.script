@@ -1,0 +1,18 @@
+(*Click "Proto-Q"*)
+
+Click "proto-d"
+wait 5
+
+Click "PlayerControlPanel"
+
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+(*Click "PauseButton"*)
+drag "SliderNeedle"
+Drop "EndTimer"
+(*Click "PlayButton"*)
+WaitFor 10, "ReplayButton"
+MoveTo "ReplayButton"

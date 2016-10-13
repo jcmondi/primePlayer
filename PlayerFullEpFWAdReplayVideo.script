@@ -1,0 +1,11 @@
+(*waitfor 220,  "SpReplayButton"
+
+Click "SpReplayButton"
+
+if ImageFound("SpReplayButton")
+	Click FoundImageLocation()
+end if*)
+
+MoveTo "AdContent"
+
+

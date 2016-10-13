@@ -1,0 +1,5 @@
+if ImageFound("QuantserveFlash")
+	moveto "PixelSwf"
+	moveto item of EveryImageLocation("PixelSwf")
+	click "QuantserveFlash"
+end if

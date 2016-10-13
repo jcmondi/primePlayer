@@ -1,0 +1,51 @@
+(*click "macChrome"*)
+
+doubleclick "playerAPI"
+
+waitfor 10, "PosterPlayButton"
+moveto "PosterPlayButton"
+(*click "PosterPlayButton"*)
+
+wait 3
+
+click "Method"
+click "playURI"
+click "uriField"
+(*typeText "http://media.mtvnservices.com/mgid:cms:video:thedailyshow.com:357717"*)
+
+typeText "mgid:cms:episode:colbertnation.com:424436"
+
+click "run"
+
+if ImageFound("ContentUnavailable")
+	MoveTo FoundImageLocation()
+	LogError "ContentUnavailableFound"
+end if
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+	wait 30
+end if
+
+(*moveto "playstates.playing"*)
+
+click "apiPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "PauseButton"
+
+(*moveto "playstates.Paused"*)
+
+moveto "playURiTRT"
+
+click "apiPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "PlayButton"
+click "EndPointAPI"
+
+(*waitfor 40, "ReplayButton"
+moveto "ReplayButton"*)
+(*click "ReplayButton"*)
+
+(*click "ClearButton"*)

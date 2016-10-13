@@ -1,0 +1,112 @@
+Click "proto-d"
+(*Click "Proto-Q"*)
+
+if ImageFound("okButton")
+	Click FoundImageLocation()
+end if
+
+waitfor 10, "AdvancedTab"
+(*
+Click "AdvancedTab"*)
+
+if ImageFound("okButton")
+	Click FoundImageLocation()
+end if
+
+(*
+repeat until imageFound("LoaderURL")
+	click "Scrollbar"
+end repeat
+
+
+click "LoaderURL"
+typeText commandKey, "a"
+
+typetext backspace
+
+typeText "/player/prime/?v=2.0.0-5"
+
+
+(*click the last item of EveryImageLocation("Setbutton")*)
+
+click "LoaderSetbutton"
+
+click "RefreshButton"
+*)
+
+
+click "BandwidthMetrics"
+wait 4
+click "RenditionMgmt"
+(*
+if ImageFound("PlayButtonLg01", "PlayButtonLg") 
+	Click FoundImageLocation()
+end if*)
+
+moveTo "UpcomingRendition"
+
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+wait 20
+
+if ImageFound("upcomingRendition2") 
+	Click FoundImageLocation()
+end if
+
+wait 10
+
+if ImageFound("upcomingRendition2") 
+	moveTo FoundImageLocation()
+end if
+
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+if ImageFound("Rendition02") 
+	moveTo FoundImageLocation()
+end if
+
+wait 10
+
+if ImageFound("Rendition02") 
+	moveTo FoundImageLocation()
+end if
+
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+wait 10
+
+moveto "Rendition02"
+
+
+
+(*
+MoveTo "Bitratelimiter"
+MoveTo "UpcomingRendition"
+MoveTo "MaxFittingRendition"
+
+*)
+
+
+(*click "ScrollbarTop"
+
+Click "PlayButtonLg01"*)
+(*Click "PlayButtonLg"*)
+
+(*
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+Click "PlayButtonPanel"
+Click "PauseButton"
+drag "SliderNeedle"
+Drop "EndTimer"
+(*Drop "EndTimerQ"*)
+Click "PlayButton"
+WaitFor 10, "ReplayButton"
+MoveTo "ReplayButton"
+*)

@@ -1,0 +1,9 @@
+moveTo "mtvControls"
+
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+if ImageFound(10, "facebook")
+	MoveTo FoundImageLocation()
+	LogError "facebook Found"
+end if

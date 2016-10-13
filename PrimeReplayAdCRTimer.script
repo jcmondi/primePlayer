@@ -1,0 +1,9 @@
+moveTo "mtvControls"
+
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+if ImageFound("CRTzero")
+	MoveTo FoundImageLocation()
+	LogError "CRT Found"
+end if

@@ -1,0 +1,63 @@
+
+Click "Chrome"
+
+click "playerAPI"
+
+wait 4
+
+click "ChromeTools"
+click "openTools"
+click "javaScriptConsole"
+
+wait 2
+
+
+typeText <<player.on("performance", function(){console.log(arguments);});>>
+
+TypeText ENTER
+
+wait 2
+
+click "Method"
+click "apiPlay"
+click "run"
+
+wait 5
+
+
+click "Method"
+click "pause"
+click "run"
+
+click "performanceObject"
+moveTo "configReceivedConfigRequest"
+moveTo "load"
+moveTo "mediaGenReceivedMediaGenRequest"
+moveTo "mRSSReceivedMRSSrequest"
+moveTo "playRequestPlayStarted"
+
+moveTo "performanceValue"
+
+moveTo item of EveryImageLocation("performanceValue")
+
+(*moveTo "performanceValue1"
+
+moveTo item of EveryImageLocation("performanceValue1")*)
+
+click "closeJS"
+
+drag "apiSlider"
+drop "apiSliderdown"
+
+
+click "performanceObjectLog"
+
+
+(*typeText "player.on("performance", function(){console.log(arguments);});"*)
+
+
+
+
+
+
+

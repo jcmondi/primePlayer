@@ -1,0 +1,20 @@
+click "LivePlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+Click "DVRPlayBUtton"
+wait 3
+click "LivePlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+click "DVRSliderQuarterPoint"
+click "LivePlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+drag "DVRSliderNeedle"
+drop "DVRSliderEndPoint"
+wait 10
+
+moveto "LiveDisplay"
+

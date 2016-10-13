@@ -1,0 +1,63 @@
+(*http://media.mtvnservices-d.mtvi.com/proto/player_test/index.php?feed=xml%2Ffeeds%2Ffms%2Fepisode_tds_l3.xml*)
+
+(*Click "proto-d"*)
+click "bookmarks"
+Click "ProtoPlaylist"
+
+(*Click "Proto-Q"*)
+
+(*if ImageFound("okButton")
+	Click FoundImageLocation()
+end if*)
+
+(*waitfor 10, "AdvancedTab"*)
+(*Click "AdvancedTab"*)
+
+(*if ImageFound("okButton")
+	Click FoundImageLocation()
+end if*)
+
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+end if
+
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "Pausebutton"
+(*moveto "ccButton"*)
+click "ccButton"
+
+moveTo "captionsUnavailable"
+click "ccOFF"
+
+click "ccON"
+click "ccOK"
+
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "ccButton"
+
+moveTo "ccOnConfirmation"
+
+click "ccOK"
+click "playButton"
+
+wait 11
+
+
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+moveto "ccButton"
+click "ccDisplay"
+
+waitfor 30, "ccDailyShowSeg1"
+
+
+
+
+
+

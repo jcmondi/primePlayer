@@ -1,0 +1,9 @@
+click "LivePlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+Click "DVRPauseButton"
+MoveTo "GoLiveButton"
+wait 5
+Click "DVRPlayButton"
+wait 3
+

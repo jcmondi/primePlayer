@@ -1,0 +1,17 @@
+(*FullScreen*)
+
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "FullScreenButton"
+click "FullScreenMenuButton"
+
+if ImageFound("ccFullScreenText")
+	MoveTo FoundImageLocation()
+end if
+
+click
+
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "FullScreenButton"

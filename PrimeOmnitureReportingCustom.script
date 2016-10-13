@@ -1,0 +1,22 @@
+click "ResetCharles"
+
+click "mtvEp"
+
+waitfor 10, "mtvControls"
+
+waitFor 30, "mtvOmniture"
+
+click "mtvOmniture"
+click "OmnitureASCall"
+
+if ImageFound("Request")
+	Click FoundImageLocation()
+end if
+
+moveTo "c72LocationValue"
+moveTo "c74SubbrandValue"
+
+
+
+
+

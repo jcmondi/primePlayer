@@ -1,0 +1,34 @@
+(* http://www.thedailyshow.com/full-episodes/ *)
+
+if ImageFound("DailyShowFullEp", "DailyShowFullEp01")
+	click FoundImageLocation()
+end if
+
+(*click "DailyShowFullEp"*)
+
+click "ResetCharles"
+
+waitfor 10, "PlayerControlsComedy"
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+end if
+
+wait 60
+
+click "PlayerControlsComedy"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+Click "PauseButton"
+moveto "PlayerSlider"
+
+click "ResetCharles"
+
+click "PlayerControlsComedy"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "Comedy2ndSegment"
+
+Click "PauseButton"
+moveto "PlayerSlider"

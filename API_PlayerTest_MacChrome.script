@@ -1,0 +1,33 @@
+(*click "macChrome"*)
+
+doubleclick "apiTest"
+
+waitfor 10, "PosterPlayButton"
+moveto "PosterPlayButton"
+click "PosterPlayButton"
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+	wait 30
+end if
+
+moveto "playstates.playing"
+
+click "apiPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "PauseButton"
+
+moveto "playstates.Paused"
+
+click "apiEndPoint"
+
+click "PlayButton"
+
+
+
+waitfor 40, "ReplayClip"
+moveto "ReplayClip"
+(*click "ReplayButton"*)
+
+(*click "ClearButton"*)

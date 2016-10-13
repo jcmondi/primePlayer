@@ -1,0 +1,64 @@
+doubleclick "GTfullEp"
+(*http://www.gametrailers.com/full-episodes/mt5fks/gt-tv-tomb-raider*)
+
+wait 7
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+	wait 30
+end if
+
+if ImageFound("AgeGateText")
+	MoveTo FoundImageLocation()
+	Click "AgeGateMonth"
+	TypeText "3"
+	Click "AgeGateDay"
+	TypeText "3"
+	Click "AgeGateYear"
+	TypeText "1990"
+	Click "AgeGateOK"
+end if
+
+click "gtPlayerControls2"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+wait 15
+moveto "HD"
+
+
+click "gtQ1Point"
+wait 5
+moveto "HD"
+wait 5
+
+click "gtMidPoint"
+wait 5
+moveto "HD"
+
+click "FullScreenButton"
+wait 15
+
+click
+
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+click "FSFullScreenButton"
+
+click "gtPlayerControls2"
+moveto "HD"
+
+click "PlayBUtton"
+
+wait 10
+
+moveto "HD"
+
+(*moveto "PauseBUtton"
+click "gtMidPoint"*)
+
+(*Click "gt2ndSegment"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+Moveto "gt2ndSegmentAdvanceRT"*)
+

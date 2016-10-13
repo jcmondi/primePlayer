@@ -1,0 +1,31 @@
+click "EndScreenEmbed"
+(*click "EmbedCode"*)
+TypeText CommandDown,c
+
+rightClick "createPost"
+click "labSpace"
+
+wait 5
+
+Click "PostTitle"
+wait 5
+
+typeText "Test"
+
+Click "EmbedBody"
+TypeText CommandDown,v
+wait 5
+Click "PreviewButton"
+wait 5
+Click "PreviewTest"
+
+moveTo "EmbedPosterPlay"
+
+click "ClosePreview"
+click "CloseLabSpace"
+click "EmbedCloseButton"
+
+
+
+
+

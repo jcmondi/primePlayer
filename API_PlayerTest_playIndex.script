@@ -1,0 +1,41 @@
+(*click "Chrome"*)
+doubleclick "playerAPI"
+
+waitfor 10, "PosterPlayButton"
+moveto "PosterPlayButton"
+
+click "Method"
+click "playIndex"
+click "IndexField"
+typeText "1"
+click "startTimeField"
+typeText "60"
+click "run"
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+	wait 30
+end if
+
+(*moveto "playstates.playing"*)
+
+click "apiPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "PauseButton"
+
+(*moveto "playstates.Paused"*)
+
+moveto "API_index1_RT"
+
+click "apiPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "PlayButton"
+click "EndPointAPI"
+
+(*waitfor 40, "ReplayButton"
+moveto "ReplayButton"*)
+(*click "ReplayButton"*)
+
+(*click "ClearButton"*)

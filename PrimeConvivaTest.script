@@ -1,0 +1,42 @@
+doubleclick "GT_Clip"
+
+click "ResetCharles"
+
+wait 15
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+	wait 30
+end if
+
+if ImageFound("AgeGateText")
+	MoveTo FoundImageLocation()
+	Click "AgeGateMonth"
+	TypeText "3"
+	Click "AgeGateDay"
+	TypeText "3"
+	Click "AgeGateYear"
+	TypeText "1990"
+	Click "AgeGateOK"
+end if
+
+click "gtPlayerControls2"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+wait 5
+
+(*moveto "HD"*)
+
+(*moveto "ConvivaPassDL"
+click "ConvivaPassDL"
+click "ConvivaVer"
+moveTo "ConvivaSWF"*)
+
+moveto "Conviva"
+click "Conviva"
+click "ConvivaIpConfig"
+(*click "ConvivaIpConfig"*)
+moveto "ConvivaToken"
+
+
+

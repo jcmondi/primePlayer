@@ -1,0 +1,8 @@
+click "EndScreenFacebook"
+moveTo "FacebookShare"
+click "CloseFacebook"
+
+click "EndScreenTwitter"
+moveTo "ShareViaPlayer"
+click "CloseTwitter"
+

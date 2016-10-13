@@ -1,0 +1,8 @@
+(*http://media.mtvnservices-d.mtvi.com/proto/player_test/index.php?feed=xml%2Ffeeds%2Fprogressive%2Ftimed_text_cc_only.xml*)
+
+(*Click "proto-d"*)
+click "bookmarks"
+Click "ccDemo"
+
+waitFor "VideoPlaybackSlate"
+

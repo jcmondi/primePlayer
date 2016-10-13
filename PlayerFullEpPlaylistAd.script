@@ -1,0 +1,3 @@
+waitfor 320,  "AdContent"
+
+MoveTo "AdContent"

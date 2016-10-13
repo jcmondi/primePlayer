@@ -1,0 +1,21 @@
+click "ResetCharles"
+
+click "bookmarks"
+
+click "LiveTest"
+
+wait 5
+
+(*click "LivePosterPlay"*)
+
+moveTo "LivePlayback"
+
+click "LivePlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+MoveTo "back30button"
+if ImageFound("LIVEdisplay", "goLiveBUtton")
+	MoveTo FoundImageLocation()
+end if
+

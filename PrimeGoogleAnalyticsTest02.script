@@ -1,0 +1,13 @@
+click "ResetCharles"
+
+doubleclick "Gametrailers"
+
+waitfor 30, "googleAnalytics"
+
+click "googleAnalytics"
+
+wait 10
+
+IF ImageFound("gaJS")
+	click FoundImageLocation()
+end if

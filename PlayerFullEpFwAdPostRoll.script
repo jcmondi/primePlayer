@@ -1,0 +1,33 @@
+wait 30
+click "SouthParkPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "endOfTimelineSP"
+
+click "ResetCharles"
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+end if
+
+
+if ImageFound ("FreeWheelFolder3")
+	click FoundImageLocation()
+	wait 15
+	(*moveto "FW3"*)
+	wait 2
+	click "FreeWheelFolder3"
+end if
+
+if ImageFound ("FreeWheelFolder")
+	click FoundImageLocation()
+	moveto "FWVideoRenderer"
+	click "FreeWheelFolder"
+end if
+
+(*if ImageFound ("FreeWheelFolder2")
+	click FoundImageLocation()
+	moveto "FW2"
+	click "FreeWheelFolder2"
+end if*)
+

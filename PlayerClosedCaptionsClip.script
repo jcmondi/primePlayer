@@ -1,0 +1,145 @@
+(*http://media.mtvnservices-d.mtvi.com/proto/player_test/index.php?feed=xml%2Ffeeds%2Fprogressive%2Ftimed_text_cc_only.xml*)
+
+(*Click "proto-d"*)
+click "bookmarks"
+Click "ccDemo"
+
+
+wait 10
+
+(*moveto, "AdvancedTab"*)
+(*Click "AdvancedTab"*)
+
+(*
+if ImageFound("okButton")
+	Click FoundImageLocation()
+end if
+
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+	wait 20
+end if
+*)
+
+if ImageFound("ccMusic")
+	MoveTo FoundImageLocation()
+end if
+
+waitFor 10, "ccLeftScreenText"
+(*moveto "ccLeftScreenText"*)
+
+(*Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO*)
+
+waitFor 10, "ccRightScreenText"
+(*moveto "ccRightScreenText"*)
+
+(*if ImageFound("ccMusic")
+	MoveTo FoundImageLocation()
+end if*)
+
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "PauseButton"
+click "ccButton"
+(*moveto "ccSelectLanguage"*)
+(*moveto "EnglishCC"*)
+moveto "ClosedCaptions"
+click "ccOK"
+
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "PlayButton"
+
+wait 2
+
+waitFor 10, "ccItalicized"
+
+waitFor 10, "ccBottomOfScreenText"
+(*moveto "ccBottomOfScreenText"*)
+(*moveto "NameOnScreen"*)
+
+(*FullScreen*)
+
+(*Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "FullScreenButton"*)
+(*click "FullScreenMenuButton"*)
+
+(*
+if ImageFound("ccFullScreenText")
+	MoveTo FoundImageLocation()
+end if
+
+click
+
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "FullScreenButton"
+
+
+waitFor 30, "ccOneCharacterAtATime"
+moveto "ccOneCharacterAtATime"
+
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+moveto "fullScreenBUtton"
+click "PlayerSizeSmall"
+*)
+
+(*Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "PauseButton"*)
+
+(*
+if ImageFound("ccLiveTvSm")
+	MoveTo FoundImageLocation()
+end if
+
+
+if ImageFound("ccCaptionSm")
+	MoveTo FoundImageLocation()
+end if
+
+click "PauseButton"
+*)
+
+
+
+(*waitFor 15, "ccCaptionSm"
+moveTo "ccCaptionSm"*)
+(*
+moveto "fullScreenBUtton"
+click "PlayerSizeLarge"
+*)
+
+(*waitFor 15, "ccCaptionLg"
+moveTo "ccCaptionLg"*)
+
+(*if ImageFound("ccCaptionLg")
+	MoveTo FoundImageLocation()
+end if*)
+
+(*if ImageFound("ccCaptionLg02")
+	MoveTo FoundImageLocation()
+end if
+
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+moveto "fullScreenBUtton"
+click "PlayerSizeMedium"*)
+
+(*Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "PlayButton"*)
+
+

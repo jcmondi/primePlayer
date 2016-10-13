@@ -1,0 +1,15 @@
+(*click "StopCountdown"*)
+(*moveto "iPadCountdownSuspended"*)
+
+moveTo "JustWatched"
+
+moveTo "EndScreenMetaData"
+moveTo "ReplayClip"
+moveTo "WatchFullEp"
+
+moveto "EndScreenFacebook"
+moveto "EndScreenTwitter"
+moveto "EndScreenLink"
+moveto "EndScreenEmbed"
+moveto "EndScreenRelatedVideos"
+moveto "EndScreenPlayButton"

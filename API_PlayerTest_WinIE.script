@@ -1,0 +1,50 @@
+(*
+click "macSafari"
+*)
+
+(*moveto "apiTest"*)
+
+(*moveto "apitest"*)
+
+doubleclick "apiTest"
+
+waitfor 10, "PosterPlayButtonIE"
+moveto "PosterPlayButtonIE"
+click "PosterPlayButtonIE"
+
+if ImageFound("AdContent")
+	MoveTo FoundImageLocation()
+	wait 30
+end if
+
+(*
+moveto "playstates.playing"
+*)
+
+click "apiPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+click "apiPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+click "PauseButton"
+
+click "apiPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+drag "sliderNeedle"
+drop "apiEndPoint"
+
+click "apiPlayerControls"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+if ImageFound("playButton")
+	click FoundImageLocation()
+end if
+
+waitfor 40, "JustWatched"
+moveto "JustWatched"
+(*click "ReplayButton"*)
+
+(*click "ClearButton"*)

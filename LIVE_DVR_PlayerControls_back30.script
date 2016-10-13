@@ -1,0 +1,9 @@
+Click "back30"
+
+wait 10
+
+click "LivePlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+moveto "GoLiveButton"
+Click "DVRPauseButton"

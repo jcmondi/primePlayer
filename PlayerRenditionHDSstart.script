@@ -1,0 +1,58 @@
+(*http://media.mtvnservices-d.mtvi.com/proto/player_test/index.php?feed=xml%2Ffeeds%2Fhds%2Fclip_gt_akamai.xml*)
+
+(*Click "Chrome"*)
+
+
+Click "HDS_Feed"
+(*Click "Proto-Q"*)
+
+if ImageFound("okButton")
+	Click FoundImageLocation()
+end if
+
+if ImageFound("Login")
+	Click FoundImageLocation()
+end if
+
+waitfor 10, "AdvancedTab"
+(*Click "AdvancedTab"*)
+
+if ImageFound("okButton")
+	Click FoundImageLocation()
+end if
+
+(*
+repeat until imageFound("LoaderURL")
+	click "Scrollbar"
+end repeat
+
+
+click "LoaderURL"
+typeText commandKey, "a"
+
+typetext backspace
+
+typeText "/player/prime/?v=2.0.0-5"
+
+
+(*click the last item of EveryImageLocation("Setbutton")*)
+
+click "LoaderSetbutton"
+
+click "RefreshButton"
+*)
+
+
+click "BandwidthMetrics"
+wait 2
+click "DisplayMetrics"
+wait 2
+click "RenditionMgmt"
+(*
+if ImageFound("PlayButtonLg01", "PlayButtonLg") 
+	Click FoundImageLocation()
+end if*)
+
+moveto ("Rendition2", "Rendition3")
+moveto "upcomingNaN"
+moveto ("maxRendition2", "maxRendition3")

@@ -1,0 +1,79 @@
+(*click "BrowserURL"
+paste "http://www.thedailyshow.com/full-episodes/thu-march-1-2012-m--cathleen-kaveny"*)
+
+(*click "ResetCharles"*)
+
+if ImageFound("DailyShowFullEp", "DailyShowFullEp01")
+	click FoundImageLocation()
+end if
+
+(*click "DailyShowFullEp"*)
+
+click "ResetCharles"
+
+waitfor 10, "PlayerControlsComedy"
+
+wait 30
+
+(*click "PlayerControlsComedy"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+if ImageFound("PauseButton01", "PauseButton02")
+	MoveTo FoundImageLocation()
+end if*)
+
+moveto "mtvnOmniture"
+click foundimagelocation()
+--click "mtvnOmniture"
+waitfor 30,  "viacomedyCentralDev"
+click "viacomedyCentralDev"
+moveto "FlashVideoCalls"
+moveto "OmniturePixel"
+wait 30
+moveto item of EveryImageLocation("OmniturePixel")
+(*click "viacomedyCentral"
+click "mtvnOmniture"*)
+
+(*
+if ImageFound("QuantservePixel")
+	Click FoundImageLocation()
+	moveto "QuantservePixelPing"
+end if
+
+
+if ImageFound("QuantserveFlash")
+	moveto "PixelSwf"
+	moveto item of EveryImageLocation("PixelSwf")
+	click "QuantserveFlash"
+end if
+
+if ImageFound("SecureStudiesBeacon")
+	click "SecureStudiesBeacon"
+	(*click "BeaconScripts"*)
+	moveto "BeaconPings"
+	moveto item of EveryImageLocation("PixelSwf")
+	click "SecureStudiesBeacon"
+end if
+*)
+
+moveto item of EveryImageLocation("OmniturePixel")
+
+
+(*click "ScoreCardResearch"*)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

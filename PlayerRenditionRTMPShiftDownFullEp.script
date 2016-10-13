@@ -1,0 +1,12 @@
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+moveto "fullScreenBUtton"
+
+click "PlayerSizeSmall"
+moveto "upcomingRendition0"
+moveto "maxRendition0"
+
+waitfor 5, "shiftDown"
+waitfor 20, "rendition0"
+moveto "rendition0"

@@ -1,0 +1,21 @@
+(*LargeEmbed*)
+
+moveto "fullScreenBUtton"
+click "PlayerSizeLarge"
+
+(*waitFor 15, "ccCaptionLg"
+moveTo "ccCaptionLg"*)
+
+(*if ImageFound("ccCaptionLg")
+	MoveTo FoundImageLocation()
+end if*)
+
+if ImageFound("ccCaptionLg02")
+	MoveTo FoundImageLocation()
+end if
+
+Click "PlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+moveto "fullScreenBUtton"
+click "PlayerSizeMedium"

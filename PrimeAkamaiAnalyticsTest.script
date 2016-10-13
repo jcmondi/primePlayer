@@ -1,0 +1,42 @@
+
+click "ResetCharles"
+
+click "Gametrailers"
+
+click "PlayerConfig"
+click "pmtConfig"
+click "configXML"
+
+if ImageFound("Response")
+	click FoundImageLocation()
+end if
+
+if ImageFound("amaTrue")
+	MoveTo FoundImageLocation()
+	Moveto "AMA_URL_76"
+	waitfor 30, "AMA76_R"
+	click "AMA76_R"
+	click "AMA_Config"
+	moveto "beaconENT"
+	waitfor 30, "AMAgif"
+	moveto "AMAgif"
+end if
+
+if ImageFound("amaFalse")
+	MoveTo FoundImageLocation()
+	ImageNotFound(30, "AMA76_R")
+	notFound "AMA76_R" 
+end if
+
+(*moveto "AMA67"
+click "AMA67"
+moveto "AMAgif"
+
+moveto "AMA76"
+click "AMA76"
+click "AMA_Config"
+moveto "beaconENT"*)
+
+
+
+

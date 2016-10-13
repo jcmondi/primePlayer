@@ -1,0 +1,9 @@
+drag "DVRSliderNeedle"
+Drop "DVRSliderMidPoint"
+(*Drop "MidPointSlider"*)
+
+click "LivePlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+MoveTo "GoLiveBUtton"

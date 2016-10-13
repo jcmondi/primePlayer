@@ -1,0 +1,80 @@
+(* DVR LIVE Feed MediaGen = http://media.mtvnservices-d.mtvi.com/proto/player_test/xml/mediagens/dynamic/live_akamai_http.php?streamNumber=26&dvr=true *)
+
+(* change the streamNumber based on current Live Stream Feed *)
+
+click "LiveTest"
+wait 5
+
+
+(*click "LivePosterPlay"*)
+
+click "LivePlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+MoveTo "back30button"
+if ImageFound("LIVEdisplay", "goLiveBUtton")
+	MoveTo FoundImageLocation()
+end if
+
+click "LivePlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+moveto "AudioControls"
+drag "AudioSlider"
+drop "AudioDown"
+
+
+(*moveto "AudioSliderDown"*)
+
+(*wait 3
+Click "DVRPauseButton"
+wait 3*)
+
+click "LivePlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+Click "DVRPauseButton"
+MoveTo "GoLiveButton"
+wait 5
+Click "DVRPlayButton"
+wait 3
+
+
+click "LivePlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+Click "GoLiveButton"
+wait 10
+MoveTo "LIVEdisplay"
+wait 3
+
+(*Click "back30button"*)
+Click "back30"
+
+wait 10
+
+click "LivePlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+Click "DVRPauseButton"
+drag "DVRSliderNeedle"
+Drop "DVRSliderMidPoint"
+(*Drop "MidPointSlider"*)
+
+click "LivePlayerControlPanel"
+put the shouldrepositionmouse into oldSRPM
+set the shouldrepositionmouse to NO
+
+MoveTo "GoLiveBUtton"
+Click "DVRPlayBUtton"
+wait 3
+drag "DVRSliderNeedle"
+drop "DVRSliderEndPoint"
+wait 10
+
+moveto "LiveDisplay"
+

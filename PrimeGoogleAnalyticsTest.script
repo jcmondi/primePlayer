@@ -1,0 +1,31 @@
+click "ResetCharles"
+
+if ImageFound("DailyShowFullEp", "DailyShowFullEp01")
+	click FoundImageLocation()
+end if
+
+waitfor 30, "googleAnalytics"
+
+click "googleAnalytics"
+
+IF ImageFound("gaJS")
+	click FoundImageLocation()
+end if
+
+IF ImageFound("gaGIF")
+	click FoundImageLocation()
+end if
+
+IF ImageFound("Request")
+	click FoundImageLocation()
+end if
+
+moveTo "TDSfullEp_utme"
+
+
+
+
+
+
+
+
